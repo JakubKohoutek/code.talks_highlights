@@ -3,8 +3,7 @@ import PropTypes from "prop-types";
 import ReactDOM from "react-dom";
 import { AppContainer } from "react-hot-loader";
 import Redbox from "redbox-react";
-import { Deck, Slide } from 'spectacle';
-import components from './presentation/components';
+import { Deck } from 'spectacle';
 import slides, { transitions } from "./presentation/index.mdx";
 import theme from './presentation/theme';
 
@@ -27,7 +26,11 @@ const creeperTransition = (transitioning, forward) => {
 
 ReactDOM.render(
   <AppContainer errorReporter={CustomErrorReporter}>
-    <Deck transition={[creeperTransition]} transitionDuration={500} theme={theme}>
+    <Deck
+      transition={[creeperTransition]}
+      transitionDuration={500}
+      theme={theme}
+      >
       {slides.map((S, i) => {
         let transition = transitions[i] || null;
         return <S transition={transition} key={`slide-${i}`} />;

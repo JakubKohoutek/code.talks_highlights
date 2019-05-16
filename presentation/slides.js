@@ -4,14 +4,6 @@ import { MDXProvider } from '@mdx-js/tag'
 import components from './components';
 import theme from './theme';
 
-// DEFAULT LAYOUT
-
-export const DefaultSlide = ({ children, ...rest }) => (
-  <Slide {...rest}>
-    <MDXProvider components={components}>{children}</MDXProvider>
-  </Slide>
-);
-
 // DARK LAYOUT
 
 const darkComponents = {
@@ -21,11 +13,25 @@ const darkComponents = {
   h4: ({ children }) => <Heading size={4} textColor={theme.screen.colors.quaternary}>{children}</Heading>,
   h5: ({ children }) => <Heading size={5} textColor={theme.screen.colors.quaternary}>{children}</Heading>,
   h6: ({ children }) => <Heading size={6} textColor={theme.screen.colors.quaternary}>{children}</Heading>,
-  p: ({ children }) => <Text textColor="white">{children}</Text>
+  p: ({ children }) => <Text textAlign="left" textColor="white">{children}</Text>,
+  ul: ({ children }) => <Text textAlign="left" textColor="white">{children}</Text>
 }
 
 export const DarkSlide = ({ children, ...rest }) => (
   <Slide bgColor="black" {...rest}>
+    <MDXProvider components={darkComponents}>{children}</MDXProvider>
+  </Slide>
+);
+
+// DEFAULT LAYOUT
+
+export const DefaultSlide = ({ children, ...rest }) => (
+  <Slide
+    bgImage="../audience.jpg"
+    bgDarken={0.5}
+    bgColor="black"
+    {...rest}
+    >
     <MDXProvider components={darkComponents}>{children}</MDXProvider>
   </Slide>
 );

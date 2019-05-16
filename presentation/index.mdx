@@ -1,72 +1,103 @@
 import {Cite} from 'spectacle';
-import {DarkSlide, CodeSlide} from './slides';
-import RegularComponent from './regular-component';
+import {DarkSlide, CodeSlide, LastSlide} from './slides';
 
-# Spectacle MDX!
+# Code.talks Commerce
 
-**open the presentation/index.mdx file to get started**
+#### The E-commerce dev conference
+
+#### Berlin, 4 & 5 April 2019
 
 ---
-export default DarkSlide
+
+![Venue](./venue.jpg)
+
+---
+
+![Selfie](./selfie.jpeg)
+
+---
+
+## Pros  
+
+🍿 Popcorn and Nachos all-you-can-eat  
+🏰 Really nice venue, luxury catering  
+🗺 Great location - cinema near city center  
+👍 Some interesting presentations  
+💰 Cost - I won the ticket
+
+---
+
+## Cons  
+
+🇩🇪 Many presentations in German only  
+🧐 Topics not that relevant for me  
+
+---
 
 export const transition = ['zoom']
 
-# Write your Spectacle Presentations in Markdown
-## And seamlessly use React Components  
-**How sweet is that**  
-**(super sweet)**
+## Two topics I found most interesting
 
 ---
 
-![datboi](https://pbs.twimg.com/media/CkjFUyTXEAEysBY.jpg)
-
-
----
-
-<RegularComponent/>
+## What it takes to become a Great Developer 
+###### Opinionated talk
+<Cite>By Christian Zacharias (@pulni)</Cite>  
 
 ---
 
-###### Typography
+## What makes code/software "good"?  
 
-# Heading 1
-
-## Heading 2
-
-### Heading 3
-
-#### Heading 4
-
-##### Heading 5
-
-###### Heading 6
-
-Standard Text
+* It's maintainable
+* It's changeable
+* It's well documented
+* It has (automated) tests
+* It uses monitoring, logging and metrics
+* Has automated deployment 
 
 ---
 
-###### Standard List
+## What makes a "great" developer?  
 
-- Item 1
-- Item 2
-- Item 3
-- Item 4
+* Consistent style - e.g. using of styleguide
+* Understanding (of product, architecture, ...)
+* Communication (team, stakeholders, ...)
+* Learning mindset - knowledge is not static
+* Is mentoring others - learns by teaching
+
+---
+
+## Building with PWA 
+<Cite>Jamie Maria Schouren</Cite>  
 
 ---
 
-> Example Quote
+## Do you know that?  
 
-<Cite>Author</Cite>
+⏰ 53 % of users will leave a site if it takes longer than 3 seconds to load  
+🌍 About 60 % of the world's population is still on 2G internet    
+📳 Speed plays a major role in user retention especially on mobile devices  
 
 ---
-export default CodeSlide
 
-```javascript
-class SuperCoolComponent extends React.Component {
-  render() {
-    return (
-      <p>code slide works in markdown too whaaaaat</p>
-    );
-  }
-}
-```
+## PWA 
+
+Progressive Web Apps combine the best of the web and the best of apps.  
+They load quickly, even on flaky networks, have an icon on the home screen, 
+can re-engage with users by sending push notifications, and load as top-level,
+full screen applications.  
+They also allow **device hardware access** that used to be available only to native apps.
+
+---
+
+## To Make PWA One Must
+
+* Create "Web App Manifest" (JSON)  
+* Serve site over https  
+* Have a valid service worker registered  
+
+When user visits the site on mobile device twice with at least 5 minutes between each 
+visit, he is shown the prompt to save the site on Home Screen
+---
+
+![That's all](./thats_all.png)
